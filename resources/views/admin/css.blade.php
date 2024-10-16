@@ -18,3 +18,8 @@
     <link rel="stylesheet" href="{{asset('/admincss/css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('/admincss/img/favicon.ico')}}">
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
