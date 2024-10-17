@@ -41,6 +41,12 @@
         border: 1px solid;
 
     }
+    .smaller-swal {
+    width: 300px !important;  /* Adjust width */
+    height: auto;  /* Auto height */
+    padding: 10px; /* Adjust padding */
+    }
+
 
     </style>
     
@@ -70,12 +76,16 @@
                 <table class="table-design">
                     <tr>
                         <th>Category Name</th>
-                        <th>Category Name</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
-                    @foreach ($data as $data)  
-                    
+
+                  @foreach ($data as $data)
                     <tr>
                         <td>{{$data->category_name}}</td>
+                        <td>
+                          <a class="btn btn-success" href="{{url('edit_category',$data->id)}}">Edit</a>
+                        </td>
                         <td>
                             <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_category',$data->id)}}">Delete</a>
                         </td>
@@ -87,6 +97,31 @@
       </div>
     </div>
     <!-- JavaScript files-->
+
+    <script type="text/javascript">
+      function confirmation(ev) {
+          ev.preventDefault(); // Prevent the default action
+          var urlToRedirect = ev.currentTarget.getAttribute('href'); // Get the href attribute value
+          console.log(urlToRedirect); // Log the URL to ensure it’s correct
+  
+          // Use SweetAlert to show confirmation dialog
+          swal({
+              title: "Are you sure you want to delete this?",
+              text: "Once deleted, you will not be able to recover this item!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+              customClass: {
+                popup: 'smaller-swal',  // Custom class for smaller size
+              }
+          }).then((willDelete) => {
+              if (willDelete) {
+                  window.location.href = urlToRedirect; // Redirect if confirmed
+              }
+          });
+      }
+  </script>
+  
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{asset('admincss/vendor/jquery/jquery.min.js')}}"></script>
