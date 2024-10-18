@@ -28,12 +28,11 @@
             text-align: center;
             color: white;
         }
-        .pagination-deg
+        input[type='search']
         {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px; 
+            width: 200px;
+            height: 40px;
+            margin-left: 50px;
         }
     </style>
   </head>
@@ -48,7 +47,12 @@
             <div class="pagination-deg">
                 {{$product->onEachSide(1)->links()}}
             </div>
-            
+            <form action="{{url('product_search')}}" method="get">
+                @csrf
+                <input type="search" name="search" placeholder="Search Product">
+                <input type="submit" class="btn btn-secondary" value="Search">
+
+            </form>
             <div class="div-design">
                 <table class="table-design">
                     <tr>
@@ -58,6 +62,7 @@
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Image</th>
+                        <th>Edit</th>
                         <th>Delete</th>
                     </tr>
 
@@ -70,6 +75,9 @@
                         <td>{{$products->quantity}}</td>
                         <td>
                             <img height="120" width="120" src="products/{{$products->image}}">
+                        </td>
+                        <td>
+                            <a class="btn btn-success" href="{{url('update_product',$products->id)}}">Edit</a>
                         </td>
                         <td>
                             <a class="btn btn-danger" href="{{url('delete_product',$products->id)}}">Delete</a>

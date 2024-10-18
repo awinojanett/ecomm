@@ -81,8 +81,52 @@ class AdminController extends Controller
 
     public function delete_product($id)
     {
-        $product = Product::find($id);  
+        $product = Product::find($id); 
+        $image_path = public_path('products/'.$product->image);
+        if(file_exists($image_path))
+        {
+            unlink($image_path);
+        } 
         $product->delete();
         return redirect()->back();
+    }
+
+    public function update_product($id)
+    {
+        $data = Product::find($id);
+        $category = Category::all();
+        return view('admin.update_page',compact('data','category'));
+        
+    }
+
+    public function edit_product(Request $request,$id)
+    {
+        $data = Product::find($id);
+        $data->name = $request->name;
+        $data->description = $request->description;
+        $data->price = $request->price;
+        $data->quantity = $request->quantity;
+        $data->category = $request->category;
+        $image = $request->image;
+        if($image)
+        {
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('products',$imagename);
+            $data->image = $imagename;
+            {
+                $data->save();
+                return redirect('/view_product');
+            }
+        }
+
+        
+    }
+    public function product_search(Request $request)
+    {
+        $search = $request->search;
+        $product = Product::where('name','LIKE','%'.$search.'%')->orWhere('category','LIKE','%'.$search.'%')->
+        paginate(3);
+
+        return view('admin.view_product',compact('product'));
     }
 }
