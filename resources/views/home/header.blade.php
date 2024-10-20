@@ -36,7 +36,7 @@
         <div class="user_option">
           @if (Route::has('login'))
           @auth
-          <a href="">
+          <a href="{{url('mycart')}}">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>[{{$count}}]
           </a>
           <form style="padding: 15px" method="POST" action="{{ route('logout') }}">
