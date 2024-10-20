@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -128,5 +129,11 @@ class AdminController extends Controller
         paginate(3);
 
         return view('admin.view_product',compact('product'));
+    }
+
+    public function view_order()
+    {
+        $data = Order::all();
+        return view('admin.order', compact('data'));
     }
 }

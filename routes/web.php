@@ -54,3 +54,10 @@ middleware(['auth', 'verified']);
 
 route::get('mycart',[HomeController::class,'mycart'])->
 middleware(['auth', 'verified']);
+
+route::post('confirm_order',[HomeController::class,'confirm_order'])->
+middleware(['auth', 'verified']);
+
+route::get('view_order',[AdminController::class,'view_order'])->middleware(['auth', 'admin']);
+
+

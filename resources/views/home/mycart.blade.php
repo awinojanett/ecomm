@@ -37,6 +37,21 @@
         margin-bottom: 50px;
         padding: 15px;
     }
+    .order-deg
+    {
+        padding-right: 50px;
+        margin-top: -30px;
+    }
+    label{
+      display: inline-block;  
+      width: 150px;
+    }
+
+    .div-gap
+    {
+      padding: 20px;  
+    }
+
 </style>
 </head>
 
@@ -50,6 +65,28 @@
   <!-- end hero area -->
 
    <div class="div-deg">
+    <div class="order-deg">
+      <form action="{{url('confirm_order')}}" method="POST">
+        @csrf
+        <div>
+            <label for="">Receiver Name</label>
+            <input type="text" name="name" value="{{Auth::user()->name}}">
+        </div>
+        <div class="div-gap">
+            <label for="">Receiver Address</label>
+            <textarea name="address" {{Auth::user()->address}}></textarea>
+        </div>
+        <div class="div-gap">
+            <label for="">Receiver Phone</label>
+            <input type="text" name="phone" value="{{Auth::user()->phone}}">
+        </div>
+        <div class="div-gap">
+            
+            <input class="btn btn-primary" type="submit" value="Place Order">
+        </div>
+        
+        </form>  
+    </div>
     <table>
         <tr>
             <th>Product Name</th>
