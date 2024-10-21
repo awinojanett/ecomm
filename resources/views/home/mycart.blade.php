@@ -68,7 +68,7 @@
     <div class="order-deg">
       <form action="{{url('confirm_order')}}" method="POST">
         @csrf
-        <div>
+        <div class="div-gap">
             <label for="">Receiver Name</label>
             <input type="text" name="name" value="{{Auth::user()->name}}">
         </div>
@@ -82,7 +82,8 @@
         </div>
         <div class="div-gap">
             
-            <input class="btn btn-primary" type="submit" value="Place Order">
+            <input class="btn btn-primary" type="submit" value="Cash On Delivery">
+            <a class="btn btn-success" href="">Pay Using Card</a>
         </div>
         
         </form>  
