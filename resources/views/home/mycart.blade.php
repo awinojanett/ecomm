@@ -83,9 +83,8 @@
         <div class="div-gap">
             
             <input class="btn btn-primary" type="submit" value="Cash On Delivery">
-            <a class="btn btn-success" href="">Pay Using Card</a>
+            <a class="btn btn-success" href="{{url('stripe')}}">Pay Using Card</a>
         </div>
-        
         </form>  
     </div>
     <table>

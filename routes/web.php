@@ -68,3 +68,8 @@ route::get('delivered/{id}',[AdminController::class,'delivered'])->middleware(['
 
 route::get('print_pdf/{id}',[AdminController::class,'print_pdf'])->middleware(['auth', 'admin']);
 
+Route::controller(HomeController::class)->group(function(){
+    Route::get('stripe/{value}', 'stripe');
+    Route::post('stripe', 'stripePost')->name('stripe.post');
+
+});
