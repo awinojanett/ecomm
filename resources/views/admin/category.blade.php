@@ -11,36 +11,36 @@
         height: 40px;
     }
 
-    .design
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px;
-    }
-    .table-design
-    {
-       text-align: center;
-       margin: auto;
-       border: 2px solid rgb(115, 182, 244);
-       margin-top: 50px;
-       width: 400px;
-    }
-    th{
-        background-color: skyblue;
-        padding: 15px;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
+        .page-header {
+      text-align: center; /* Centers the text "Add Category" */
     }
 
-    td
-    {
-        color: white;
-        padding: 10px;
-        border: 1px solid;
-
+    .design {
+      display: flex;
+      justify-content: center;  /* Centers the form horizontally */
+      align-items: center;      /* Centers the form vertically if necessary */
+      flex-direction: column;   /* Ensures form elements stack vertically */
     }
+
+    .tb-design
+    {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    .tb-design thead th {
+      background-color: white;
+      color: black;
+    }
+
+        .tb-design table {
+      border-collapse: collapse;  /* Ensures borders between columns appear correctly */
+    }
+
+  
+
     .smaller-swal {
     width: 300px !important;  /* Adjust width */
     height: auto;  /* Auto height */
@@ -72,13 +72,16 @@
             </form>
             </div>  
             
-            <div>
-                <table class="table-design">
-                    <tr>
-                        <th>Category Name</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
+            <div class="tb-design">
+                    <table class="table table-striped table-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">Category Name</th>
+                          <th scope="col">Edit</th>
+                          <th scope="col">Delete</th>
+                        </tr>
+                      </thead>
+                      
 
                   @foreach ($data as $data)
                     <tr>

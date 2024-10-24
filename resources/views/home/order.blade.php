@@ -9,7 +9,10 @@
     <style>
         .table-deg
         {
-            padding: 50px;
+          padding-top: 50px;  
+          padding-bottom: 100px;
+          padding-left: 100px;
+          padding-right: 100px;
         }
     </style>
 </head>

@@ -26,9 +26,9 @@
               </div>
             
               <div style="padding: 10px">
-                <a class="btn btn-secondary" 
+                <a class="btn btn-warning" 
                 href="{{url('product_details',$products->id)}}">Details</a>
-                <a class="btn btn-primary" href="{{url('add_cart',$products->id)}}">Add to cart</a>
+                <a class="btn btn-danger" href="{{url('add_cart',$products->id)}}">Add to cart</a>
               </div>
           </div>
         </div>

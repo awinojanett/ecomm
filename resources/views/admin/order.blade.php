@@ -6,6 +6,12 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
+  <style>
+    .tb-design thead th {
+      background-color: white;
+      color: black;
+    }
+  </style>
   <body>
     @include('admin.header')
     @include('admin.sidebar')
@@ -13,6 +19,7 @@
       <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
+            <div class="tb-design">
             <table class="table table-striped table-dark">
                 <thead>
                   <tr>
@@ -50,6 +57,7 @@
                   @endforeach
                 </tbody>
               </table>
+            </div>
           </div>
       </div>
     </div>

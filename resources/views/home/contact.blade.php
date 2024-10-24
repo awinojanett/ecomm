@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+@include('home.css')
+<style>
+  h2
+  {
+    text-align: center;
+    padding-top: 40px;
+  }
+</style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    @include('home.header')
+    <!-- end header section -->
+  </div>
+
 <section class="contact_section ">
     <div class="container px-0">
       <div class="heading_container ">
@@ -41,3 +62,9 @@
   </section>
 
   <br><br><br>
+
+  @include('home.footer')
+
+</body>
+
+</html>

@@ -97,12 +97,12 @@
 
         <?php
 
-        $value=0;
+        $value = 0;
 
         ?>
-       
+
         @foreach ($cart as $cart)
-        
+
         <tr>
             <td>{{$cart->product->name}}</td>
             <td>{{$cart->product->price}}</td>
@@ -116,11 +116,13 @@
 
         <?php
 
-        $value=$value + $cart->product->price;
+        // Cast price to float or int to avoid the string addition issue
+        $value = $value + (int)$cart->product->price;
 
         ?>
-            
+
         @endforeach
+
         
     </table>
    </div>

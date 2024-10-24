@@ -23,8 +23,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
+              We are dedicated to helping you find the perfect products to suit your needs. With a passion for innovation and customer satisfaction, we aim to deliver quality, reliability, and convenience.             </p>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="info_form ">
@@ -44,8 +43,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
+              We're here to assist! If you have any questions or need product advice, feel free to reach out. We ready to provide you with quick and friendly service.            </p>
           </div>
           <div class="col-md-6 col-lg-3">
             <h6>
@@ -54,15 +52,15 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span> Oginga Odinga Street </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
+                <span>+254799303126</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
+                <span> support@infinityelectronics.com</span>
               </a>
             </div>
           </div>
@@ -74,7 +72,7 @@
       <div class="container">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Web Tech Knowledge</a>
+          <a href="https://html.design/">Infinity Electronics</a>
         </p>
       </div>
     </footer>

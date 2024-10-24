@@ -9,11 +9,10 @@
                   <div class="detail-box"> 
                     <h1>
                       Welcome To Our <br>
-                      Gift Shop
+                      Electronics Shop
                     </h1>
                     <p>
-                      Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
-                    </p>
+                      We are excited to have you explore our wide range of high-quality electronics, from cutting-edge smartphones to smart home devices and top-notch entertainment systems. Whether you're looking for the latest gadgets or reliable tech solutions, our knowledgeable staff is here to assist you every step of the way.                    </p>
                     <a href="">
                       Contact Us
                     </a>
@@ -21,7 +20,7 @@
                 </div>
                 <div class="col-md-5 ">
                   <div class="img-box">
-                    <img style="width:600px" src="images/image3.jpeg" alt="" />
+                    <img style="width:600px" src="images/slider.webp" alt="" />
                   </div>
                 </div>
               </div>

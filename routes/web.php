@@ -8,6 +8,15 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', [HomeController::class,'home']);
 
+Route::get('/shop', [HomeController::class,'shop'])->name('shop');
+
+Route::get('/whyus', [HomeController::class,'whyus'])->name('whyus');
+
+Route::get('/testimonial', [HomeController::class,'testimonial'])->name('testimonial');
+
+Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+
+
 Route::get('/myorders', [HomeController::class,'myorders'])->
 middleware(['auth', 'verified']);
 

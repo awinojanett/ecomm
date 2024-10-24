@@ -6,27 +6,12 @@
     <style>
         .div-design
         {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
+            padding: 50px;
         }
-        .table-design
+        .div-design thead th
         {
-            border: 2px solid whitesmoke;
-        }
-        th
-        {
-            background-color: rgb(243, 244, 251);
+            background-color: white;
             color: black;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 15px;
-        }
-        td{
-            border: 1px solid white;
-            text-align: center;
-            color: white;
         }
         input[type='search']
         {
@@ -54,17 +39,19 @@
 
             </form>
             <div class="div-design">
-                <table class="table-design">
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Image</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
 
                     @foreach ($product as $products)
                     <tr>
@@ -74,7 +61,7 @@
                         <td>{{$products->price}}</td>
                         <td>{{$products->quantity}}</td>
                         <td>
-                            <img height="80" width="80" src="products/{{$products->image}}">
+                            <img height="50" width="50" src="products/{{$products->image}}">
                         </td>
                         <td>
                             <a class="btn btn-success" href="{{url('update_product',$products->id)}}">Edit</a>
